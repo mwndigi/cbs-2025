@@ -38,5 +38,3 @@ app.use('/auth', authRouter);
 app.use('/middleware', middlewareRouter);
 
 module.exports = app;
-
-
