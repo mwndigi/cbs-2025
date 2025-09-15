@@ -2,13 +2,13 @@ var express = require('express');
 var router = express.Router();
 
 /* sætter cookie */
-router.get('/set', (req, res) => {
+router.get('/set', async (req, res) => {
     res.cookie('myCookie', 'cookieValue');
     res.json({ message: 'Cookie set!' });
 });
 
 /* læser cookie */
-router.get('/get', (req, res) => {
+router.get('/get', async (req, res) => {
     const cookieValue = req.cookies.myCookie || 'No cookie set!';
     res.json({ message: cookieValue });
 });

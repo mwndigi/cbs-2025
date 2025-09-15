@@ -3,12 +3,12 @@ var router = express.Router();
 var users = require('../db/users');
 
 /* GET alle brugere */
-router.get('/', (req, res, next) => {
+router.get('/', async (req, res) => {
   res.json(users);
 });
 
 /* GET brugere ud fra brugernavn */
-router.get('/:username', (req, res, next) => {
+router.get('/:username', async (req, res) => {
   const username = req.params.username;
   const user = users.find((u) => u.username === username);
   
@@ -20,14 +20,14 @@ router.get('/:username', (req, res, next) => {
 });
 
 /* POST lav en ny bruger */
-router.post('/create', (req, res, next) => {
+router.post('/create', async (req, res) => {
   const newUser = req.body;
   users.push(newUser);
   res.status(201).json(newUser);
 });
 
 /* PUT opdater bruger ud fra brugernavn */
-router.put('/update/:username', (req, res, next) => {
+router.put('/update/:username', async (req, res) => {
     const username = req.params.username;
     const updatedData = req.body;
     const userIndex = users.findIndex((u) => u.username === username);
@@ -41,7 +41,7 @@ router.put('/update/:username', (req, res, next) => {
 });
 
 /* DELETE slet bruger ud fra brugernavn */
-router.delete('/delete/:username', (req, res, next) => {
+router.delete('/delete/:username', async (req, res) => {
     const username = req.params.username;
     const userIndex = users.findIndex((u) => u.username === username);
 

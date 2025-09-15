@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 /* GET forside */
-router.get('/', function(req, res, next) {
+router.get('/', async (req, res) => {
   res.render('index', { title: 'Cookie App' });
 });
 

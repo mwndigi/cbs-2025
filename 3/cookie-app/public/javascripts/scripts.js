@@ -1,16 +1,16 @@
-async function getUsers() {
+const getUsers = async () => {
   const response = await fetch("/user");
   const data = await response.json();
   alert(JSON.stringify(data));
 }
 
-async function getUser() {
+const getUser = async () => {
   const response = await fetch("/user/mikkel");
   const data = await response.json();
   alert(JSON.stringify(data));
 }
 
-async function createUser() {
+const createUser = async () => {
   const response = await fetch("/user/create", {
     method: "POST",
     headers: {
@@ -26,7 +26,7 @@ async function createUser() {
   alert(JSON.stringify(data));
 }
 
-async function updateUser() {
+const updateUser = async () => {
   const response = await fetch("/user/update/Hildur", {
     method: "PUT",
     headers: {
@@ -38,7 +38,7 @@ async function updateUser() {
   alert(JSON.stringify(data));
 }
 
-async function deleteUser() {
+const deleteUser = async () => {
   const response = await fetch("/user/delete/Hildur", {
     method: "DELETE",
   });
@@ -46,37 +46,37 @@ async function deleteUser() {
   alert(data.message);
 }
 
-async function setCookie() {
+const setCookie = async () => {
   const response = await fetch("/cookie/set");
   const data = await response.json();
   alert(data.message);
 }
 
-async function getCookie() {
+const getCookie = async () => {
   const response = await fetch("/cookie/get");
   const data = await response.json();
   alert(data.message);
 }
 
-async function middleware() {
+const middleware = async () => {
   const response = await fetch("/middleware");
   const data = await response.json();
   alert(JSON.stringify(data));
 }
 
-async function setSessionCookie() {
+const setSessionCookie = async () => {
   const response = await fetch("/cookie/set-session");
   const data = await response.json();
   alert(data.message);
 }
 
-async function getSessionCookie() {
+const getSessionCookie = async () => {
   const response = await fetch("/cookie/get-session");
   const data = await response.json();
   alert(data.message);
 }
 
-async function login() {
+const login = async () => {
   const response = await fetch("/auth/login", {
     method: "POST",
     headers: {
@@ -88,7 +88,7 @@ async function login() {
   alert(JSON.stringify(data));
 }
 
-async function logout() {
+const logout = async () => {
   const response = await fetch("/auth/logout", {
     method: "POST",
   });
@@ -96,7 +96,7 @@ async function logout() {
   alert(JSON.stringify(data));
 }
 
-async function protected() {
+const protected = async () => {
   const response = await fetch("/auth/protected");
   const data = await response.json();
   alert(JSON.stringify(data));
