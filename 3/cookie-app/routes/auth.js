@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
-/* endpoint som sætter en express-session cookie for bruger */
+/* sætter express-session cookie for bruger */
 router.post('/login', (req, res) => {
     req.session.user = req.body; // Simpel brugerobjekt i JSON
     res.json({ message: 'User logged in!' });
 });
 
-/* endpoint som fjerner express-session cookie for bruger */
+/* sletter express-session cookie */
 router.post('/logout', (req, res) => {
     req.session.destroy();
     res.json({ message: 'User logged out!' });

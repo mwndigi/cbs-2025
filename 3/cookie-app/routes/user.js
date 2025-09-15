@@ -2,12 +2,12 @@ var express = require('express');
 var router = express.Router();
 var users = require('../db/users');
 
-/* GET users */
+/* GET alle brugere */
 router.get('/', (req, res, next) => {
   res.json(users);
 });
 
-/* GET specific user by username */
+/* GET brugere ud fra brugernavn */
 router.get('/:username', (req, res, next) => {
   const username = req.params.username;
   const user = users.find((u) => u.username === username);
@@ -19,14 +19,14 @@ router.get('/:username', (req, res, next) => {
   res.json(user);
 });
 
-/* POST create new user */
+/* POST lav en ny bruger */
 router.post('/create', (req, res, next) => {
   const newUser = req.body;
   users.push(newUser);
   res.status(201).json(newUser);
 });
 
-/* PUT update user by username */
+/* PUT opdater bruger ud fra brugernavn */
 router.put('/update/:username', (req, res, next) => {
     const username = req.params.username;
     const updatedData = req.body;
@@ -40,7 +40,7 @@ router.put('/update/:username', (req, res, next) => {
     res.json(users[userIndex]);
 });
 
-/* DELETE user by username */
+/* DELETE slet bruger ud fra brugernavn */
 router.delete('/delete/:username', (req, res, next) => {
     const username = req.params.username;
     const userIndex = users.findIndex((u) => u.username === username);
