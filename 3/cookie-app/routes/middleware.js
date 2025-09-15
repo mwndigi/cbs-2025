@@ -13,7 +13,7 @@ const middleware = (req, res, next) => {
 /* middleware der tjekker om cookie eksisterer */
 /* husk GET /cookie/set for at sætte cookie først */
 router.get('/', middleware, (req, res) => {
-    res.json({ message: 'Cookie found!', cookies: req.cookies });
+    res.json({ message: 'Cookie found!', cookies: req.cookies.myCookie });
 });
 
 module.exports = router;
