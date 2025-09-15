@@ -1,29 +1,23 @@
 # HTTP metoder
 
-GET /user
+Endpoints:
 
-GET /user/:username
+1. GET /user
 
-POST /user/create
+2. GET /user/:username
 
-```javascript
-async function createUser() {
-  const response = await fetch("/user/create", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      username: "Hildur",
-      password: "hildudigi",
-      email: "hil.digi@cbs.dk",
-    }),
-  });
-  const data = await response.json();
-  alert(JSON.stringify(data));
-}
-```
+3. POST /user/create
 
-PUT /user/update/:username
+4. PUT /user/update/:username
 
-DELETE /user/delete/:username
+5. DELETE /user/delete/:username
+
+## 1. GET /user
+
+## 2. GET /user/:username
+
+## 3. POST /user/create
+
+## 4. PUT /user/update/:username
+
+## 5. DELETE /user/delete/:username

@@ -1,11 +1,23 @@
 # Cookies
 
-GET /cookie/set
+Endpoints:
 
-GET /cookie/get
+1. GET /cookie/set
 
-GET /middleware
+2. GET /cookie/get
 
-GET /cookie/set-session
+3. GET /middleware
 
-GET /cookie/get-session
+4. GET /cookie/set-session
+
+5. GET /cookie/get-session
+
+## 1. GET /cookie/set
+
+## 2. GET /cookie/get
+
+## 3. GET /middleware
+
+## 4. GET /cookie/set-session
+
+## 5. GET /cookie/get-session
