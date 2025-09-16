@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/image', async (req, res) => {  
-  // Set cache-control and pragma headers to prevent caching
+  // Sæt cache-control og pragma headers for at forhindre caching
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, private');
   res.setHeader('Pragma', 'no-cache');
   res.sendFile(path.join(__dirname, "../public/images", "cbs.jpeg"));
