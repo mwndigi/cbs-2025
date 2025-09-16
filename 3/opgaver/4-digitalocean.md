@@ -67,7 +67,7 @@ Se om appen er oppe og køre med følgende.
 pm2 list
 ```
 
-Se alle requests til appen med følgende.
+Se alle requests til appen med følgende. Stop logningen ved at trykke CTRL+C.
 
 ```
 pm2 logs
@@ -97,7 +97,7 @@ sudo nginx -v
 systemctl status nginx
 ```
 
-Kør derefter følgende Nginx kommandoer for kun at tillade HTTP på port 80 og ssh.
+Kør derefter følgende Nginx kommandoer for kun at tillade HTTP på port 80 og ssh på port 22 med en firewall.
 
 ```
 sudo ufw app list
@@ -167,6 +167,16 @@ cat – vis indholdet af en fil
 history – vis seneste kommandoer
 
 [Link til Linux kommandoer](https://www.geeksforgeeks.org/linux-unix/linux-commands-cheat-sheet/)
+
+# SSH
+
+Ved at åbne en terminal på din computer kan du tilgå din Droplet med Secure Shell (ssh).
+
+```
+ssh root@ip-adresse
+```
+
+Skriv derefter det password til ´root´ som du oprettede for din Droplet. Bemærk det ikke fremgår af Terminalen når du skriver et tegn i passwordet.
 
 # Fuld Nginx konfiguration
 
