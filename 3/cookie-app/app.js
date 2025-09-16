@@ -37,11 +37,11 @@ app.use(session({
 // HTTP request logging middleware
 app.use((req, res, next) => {
     console.log("----- HTTP Request -----");
-    console.log("method: ", req.method); // HTTP Method
-    console.log("uri:", req.originalUrl); // Requested URL
-    console.log("headers:", req.headers); // Request Headers
-    console.log("ip:", req.ip); // IP Address
-    console.log("body:", req.body);
+    console.log("method: ", req.method); // HTTP metode
+    console.log("url:", req.originalUrl); // URL
+    console.log("headers:", req.headers); // headers
+    console.log("ip:", req.ip); // IP adresse
+    console.log("body:", req.body); // body
     console.log("------------------------");
     next();
 });
