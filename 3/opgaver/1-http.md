@@ -2,15 +2,19 @@
 
 Endpoints i Cookie App:
 
-1. GET /user
+1. GET /
 
-2. GET /user/:username
+2. GET /image
 
-3. POST /user/create
+3. GET /user
 
-4. PUT /user/update/:username
+4. GET /user/:username
 
-5. DELETE /user/delete/:username
+5. POST /user/create
+
+6. PUT /user/update/:username
+
+7. DELETE /user/delete/:username
 
 ## Cookie App
 
@@ -45,23 +49,31 @@ app.use((req, res, next) => {
 });
 ```
 
-## 1. GET /user
+## 1. GET /
+
+Returnerer Content-Type som text/html.
+
+## 2. GET /image
+
+Returnerer Content-Type som image/jpeg.
+
+## 3. GET /user
 
 Returnerer JSON data i body.
 
-## 2. GET /user/:username
+## 4. GET /user/:username
 
 Bruger request parameter for HTTP og returnerer JSON data i body.
 
-## 3. POST /user/create
+## 5. POST /user/create
 
 Husk Content-Type: application/json som header og raw data { "key": "value" },
 
-## 4. PUT /user/update/:username
+## 6. PUT /user/update/:username
 
 Husk Content-Type: application/json som header og raw data { "key": "value" },
 
-## 5. DELETE /user/delete/:username
+## 7. DELETE /user/delete/:username
 
 Bruger request parameter for HTTP og returnerer JSON data i body.
 

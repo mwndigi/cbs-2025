@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "cb1ccdc6-2c42-417b-bfa9-f21b38dd4e1a",
 		"name": "cbs-2025",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "28835286"
 	},
 	"item": [
@@ -80,19 +80,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": {
-									"raw": "http://165.22.66.89/user",
-									"protocol": "http",
-									"host": [
-										"165",
-										"22",
-										"66",
-										"89"
-									],
-									"path": [
-										"user"
-									]
-								}
+								"url": "http://165.22.66.89/user"
 							},
 							"response": []
 						},
@@ -101,20 +89,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": {
-									"raw": "http://165.22.66.89/user/mikkel",
-									"protocol": "http",
-									"host": [
-										"165",
-										"22",
-										"66",
-										"89"
-									],
-									"path": [
-										"user",
-										"mikkel"
-									]
-								}
+								"url": "http://165.22.66.89/user/mikkel"
 							},
 							"response": []
 						},
@@ -138,20 +113,7 @@
 										}
 									}
 								},
-								"url": {
-									"raw": "http://165.22.66.89/user/create",
-									"protocol": "http",
-									"host": [
-										"165",
-										"22",
-										"66",
-										"89"
-									],
-									"path": [
-										"user",
-										"create"
-									]
-								}
+								"url": "http://165.22.66.89/user/create"
 							},
 							"response": []
 						},
@@ -175,21 +137,7 @@
 										}
 									}
 								},
-								"url": {
-									"raw": "http://165.22.66.89/user/update/Hildur",
-									"protocol": "http",
-									"host": [
-										"165",
-										"22",
-										"66",
-										"89"
-									],
-									"path": [
-										"user",
-										"update",
-										"Hildur"
-									]
-								}
+								"url": "http://165.22.66.89/user/update/Hildur"
 							},
 							"response": []
 						},
@@ -214,21 +162,7 @@
 										}
 									}
 								},
-								"url": {
-									"raw": "http://165.22.66.89/user/delete/Hildur",
-									"protocol": "http",
-									"host": [
-										"165",
-										"22",
-										"66",
-										"89"
-									],
-									"path": [
-										"user",
-										"delete",
-										"Hildur"
-									]
-								}
+								"url": "http://165.22.66.89/user/delete/Hildur"
 							},
 							"response": []
 						}
@@ -242,20 +176,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": {
-									"raw": "http://165.22.66.89/cookie/set",
-									"protocol": "http",
-									"host": [
-										"165",
-										"22",
-										"66",
-										"89"
-									],
-									"path": [
-										"cookie",
-										"set"
-									]
-								}
+								"url": "http://165.22.66.89/cookie/set"
 							},
 							"response": []
 						},
@@ -264,20 +185,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": {
-									"raw": "http://165.22.66.89/cookie/get",
-									"protocol": "http",
-									"host": [
-										"165",
-										"22",
-										"66",
-										"89"
-									],
-									"path": [
-										"cookie",
-										"get"
-									]
-								}
+								"url": "http://165.22.66.89/cookie/get"
 							},
 							"response": []
 						},
@@ -286,19 +194,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": {
-									"raw": "http://165.22.66.89/middleware",
-									"protocol": "http",
-									"host": [
-										"165",
-										"22",
-										"66",
-										"89"
-									],
-									"path": [
-										"middleware"
-									]
-								}
+								"url": "http://165.22.66.89/middleware"
 							},
 							"response": []
 						},
@@ -307,20 +203,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": {
-									"raw": "http://165.22.66.89/cookie/set-session",
-									"protocol": "http",
-									"host": [
-										"165",
-										"22",
-										"66",
-										"89"
-									],
-									"path": [
-										"cookie",
-										"set-session"
-									]
-								}
+								"url": "http://165.22.66.89/cookie/set-session"
 							},
 							"response": []
 						},
@@ -329,20 +212,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": {
-									"raw": "http://165.22.66.89/cookie/get-session",
-									"protocol": "http",
-									"host": [
-										"165",
-										"22",
-										"66",
-										"89"
-									],
-									"path": [
-										"cookie",
-										"get-session"
-									]
-								}
+								"url": "http://165.22.66.89/cookie/get-session"
 							},
 							"response": []
 						}
@@ -371,20 +241,7 @@
 										}
 									}
 								},
-								"url": {
-									"raw": "http://165.22.66.89/auth/login",
-									"protocol": "http",
-									"host": [
-										"165",
-										"22",
-										"66",
-										"89"
-									],
-									"path": [
-										"auth",
-										"login"
-									]
-								}
+								"url": "http://165.22.66.89/auth/login"
 							},
 							"response": []
 						},
@@ -393,20 +250,7 @@
 							"request": {
 								"method": "POST",
 								"header": [],
-								"url": {
-									"raw": "http://165.22.66.89/auth/logout",
-									"protocol": "http",
-									"host": [
-										"165",
-										"22",
-										"66",
-										"89"
-									],
-									"path": [
-										"auth",
-										"logout"
-									]
-								}
+								"url": "http://165.22.66.89/auth/logout"
 							},
 							"response": []
 						},
@@ -415,24 +259,29 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": {
-									"raw": "http://165.22.66.89/auth/protected",
-									"protocol": "http",
-									"host": [
-										"165",
-										"22",
-										"66",
-										"89"
-									],
-									"path": [
-										"auth",
-										"protected"
-									]
-								}
+								"url": "http://165.22.66.89/auth/protected"
 							},
 							"response": []
 						}
 					]
+				},
+				{
+					"name": "GET /",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://165.22.66.89/"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /image",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://165.22.66.89/image"
+					},
+					"response": []
 				}
 			]
 		}
