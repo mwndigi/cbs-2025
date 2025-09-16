@@ -4,6 +4,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
 
+// routers
 var indexRouter = require('./routes/index');
 var userRouter = require('./routes/user');
 var cookieRouter = require('./routes/cookie');
@@ -12,15 +13,17 @@ var middlewareRouter = require('./routes/middleware');
 
 var app = express();
 
+// middleware setup
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// express-session middleware
 app.set('trust proxy', 1); // hvis bagved en proxy (for eksempel nginx)
 app.use(session({
-    secret: 'your_secret_key', // random nøgle til at signere cookie ID
+    secret: 'mwndigi', // random nøgle til at signere cookie ID
     resave: false, // lagrer ikke hvis session ikke er ændret
     saveUninitialized: false, // lagrer ikke session før den er modificeret
     cookie: {
@@ -31,6 +34,19 @@ app.use(session({
     }
 }));
 
+// HTTP request logging middleware
+app.use((req, res, next) => {
+    console.log("----- HTTP Request -----");
+    console.log("method: ", req.method); // HTTP Method
+    console.log("uri:", req.originalUrl); // Requested URL
+    console.log("headers:", req.headers); // Request Headers
+    console.log("ip:", req.ip); // IP Address
+    console.log("body:", req.body);
+    console.log("------------------------");
+    next();
+});
+
+// routes
 app.use('/', indexRouter);
 app.use('/user', userRouter);
 app.use('/cookie', cookieRouter);

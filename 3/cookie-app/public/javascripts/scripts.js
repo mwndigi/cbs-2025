@@ -1,12 +1,16 @@
 const getUsers = async () => {
   const response = await fetch("/user");
   const data = await response.json();
+  console.log(response);
+  console.log(data);
   alert(JSON.stringify(data));
 }
 
 const getUser = async () => {
   const response = await fetch("/user/mikkel");
   const data = await response.json();
+  console.log(response);
+  console.log(data);
   alert(JSON.stringify(data));
 }
 
@@ -23,6 +27,8 @@ const createUser = async () => {
     }),
   });
   const data = await response.json();
+  console.log(response);
+  console.log(data);
   alert(JSON.stringify(data));
 }
 
@@ -35,6 +41,8 @@ const updateUser = async () => {
     body: JSON.stringify({ password: "hildudigidoo" }),
   });
   const data = await response.json();
+  console.log(response);
+  console.log(data);
   alert(JSON.stringify(data));
 }
 
@@ -43,36 +51,48 @@ const deleteUser = async () => {
     method: "DELETE",
   });
   const data = await response.json();
+  console.log(response);
+  console.log(data);
   alert(data.message);
 }
 
 const setCookie = async () => {
   const response = await fetch("/cookie/set");
   const data = await response.json();
+  console.log(response);
+  console.log(data);
   alert(data.message);
 }
 
 const getCookie = async () => {
   const response = await fetch("/cookie/get");
   const data = await response.json();
+  console.log(response);
+  console.log(data);
   alert(data.message);
 }
 
 const middleware = async () => {
   const response = await fetch("/middleware");
   const data = await response.json();
+  console.log(response);
+  console.log(data);
   alert(JSON.stringify(data));
 }
 
 const setSessionCookie = async () => {
   const response = await fetch("/cookie/set-session");
   const data = await response.json();
+  console.log(response);
+  console.log(data);
   alert(data.message);
 }
 
 const getSessionCookie = async () => {
   const response = await fetch("/cookie/get-session");
   const data = await response.json();
+  console.log(response);
+  console.log(data);
   alert(data.message);
 }
 
@@ -85,6 +105,8 @@ const login = async () => {
     body: JSON.stringify({ username: "mikkel" }),
   });
   const data = await response.json();
+  console.log(response);
+  console.log(data);
   alert(JSON.stringify(data));
 }
 
@@ -93,11 +115,15 @@ const logout = async () => {
     method: "POST",
   });
   const data = await response.json();
+  console.log(response);
+  console.log(data);
   alert(JSON.stringify(data));
 }
 
 const protected = async () => {
   const response = await fetch("/auth/protected");
   const data = await response.json();
+  console.log(response);
+  console.log(data);
   alert(JSON.stringify(data));
 }
