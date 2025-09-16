@@ -1,6 +1,6 @@
 # Droplet på DigitalOcean
 
-Når du har oprettet en Droplet på DigitalOcean skal du gå ind i Access Console.
+Når du har oprettet en Droplet på DigitalOcean skal du gå ind i Access og Droplet Console.
 
 ## Node.js
 
