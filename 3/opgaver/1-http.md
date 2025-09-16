@@ -64,3 +64,7 @@ Husk Content-Type: application/json som header og raw data { "key": "value" },
 ## 5. DELETE /user/delete/:username
 
 Bruger request parameter for HTTP og returnerer JSON data i body.
+
+# Postman
+
+[Link til API dokumentation](https://documenter.getpostman.com/view/28835286/2sB3HqHyZR)
