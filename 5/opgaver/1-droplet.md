@@ -88,6 +88,8 @@ cd 4-express-server
 pm2 start express-server.js
 
 pm2 save
+
+pm2 list
 ```
 
 Nu kører Node.js processerne på følgende porte:
