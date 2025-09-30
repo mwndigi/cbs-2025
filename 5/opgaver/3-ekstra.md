@@ -2,7 +2,7 @@
 
 Lav en Express applikation hvor brugerne kan indtaste brugernavn og password i en formular for at få adgang til en beskyttet side.
 
-1. Opret en Express applikation
+1. Opret en Express applikation (brug gerne express-generator)
 
 2. Lav endpoints for '/' (GET), '/login' (POST) og '/protected' (GET)
 
