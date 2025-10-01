@@ -2,7 +2,12 @@ const express = require('express')
 const path = require("path");
  
 const app = express()
- 
+
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+
 // User objekt
 const users = [
   { id: 1, username: 'mwndigi', password: 'minhundheddertorben' },
@@ -17,7 +22,7 @@ app.get('/', (req, res) => {
 })
 
 // POST login
-app.post('/login', (req, res) => {
+app.post('/login', (req, res, next) => {
   const { username, password } = req.body;
   console.log(req.body);
   const user = users.find(u => u.username === username && u.password === password);
