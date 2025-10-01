@@ -31,6 +31,8 @@
       const username = document.getElementById('username').value;
       const password = document.getElementById('password').value;
 
+      console.log('Logging in with', username, password);
+
       const response = await fetch('/login', {
         method: 'POST',
         headers: {
