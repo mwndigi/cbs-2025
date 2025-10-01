@@ -51,6 +51,7 @@
       const response = await fetch('/protected');
       const data = await response.json();
       document.getElementById('protectedMessage').textContent = data.message;
+      document.getElementById('logoutMessage').textContent = '';
     });
     document.getElementById('logoutBtn').addEventListener('click', () => {
       document.cookie = 'loggedIn=; Max-Age=0; path=/';
