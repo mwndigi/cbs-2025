@@ -1,18 +1,42 @@
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const express = require('express')
+const path = require("path");
+ 
+const app = express()
+ 
+// User objekt
+const users = [
+  { id: 1, username: 'mwndigi', password: 'minhundheddertorben' },
+  { id: 2, username: 'hildigi', password: 'pippilangstrump' }
+];
 
-var indexRouter = require('./routes/index');
+// index route
+app.get('/', (req, res) => {
+    // Cache-Control header for at undgå caching
+    res.setHeader('Cache-Control', 'no-store, max-age=0');
+    res.sendFile(path.join(__dirname, "/index.html"));
+})
 
-var app = express();
+// POST login
+app.post('/login', (req, res) => {
+  const { username, password } = req.body;
+  const user = users.find(u => u.username === username && u.password === password);
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+  if (user) {
+    res.cookie('loggedIn', 'true');
+    res.cookie('id', user.id);
+    res.status(200).json({ message: 'Du er nu logget ind med id ' + user.id + '.' });
+  } else {
+    res.status(401).json({ message: 'Forkert brugernavn eller adgangskode.' });
+  }
+});
 
-app.use('/', indexRouter);
+// GET protected
+app.get('/protected', (req, res) => {
+  if (req.cookies && req.cookies.loggedIn === 'true') {
+    res.status(200).json({ message: 'Du har adgang til den beskyttede side med id ' + req.cookies.id + '.' });
+  } else {
+    res.status(401).json({ message: 'Du skal logge ind for at få adgang.' });
+  }
+});
 
-module.exports = app;
+app.listen(7000);
