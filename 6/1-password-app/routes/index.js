@@ -8,6 +8,7 @@ const users = [
 
 // GET index
 router.get('/', (req, res, next) => {
+  res.setHeader('Cache-Control', 'no-store, max-age=0');
   res.render('index', { title: 'Password App' });
 });
 

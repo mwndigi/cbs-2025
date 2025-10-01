@@ -13,12 +13,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Cache-Control header for at undgå caching
-app.use((req, res, next) => {
-    res.setHeader('Cache-Control', 'no-store, max-age=0');
-    next();
-});
-
 app.use('/', indexRouter);
 
 module.exports = app;
