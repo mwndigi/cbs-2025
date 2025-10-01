@@ -1,17 +1,18 @@
 var express = require('express');
 var router = express.Router();
 
+// User objekt
 const users = [
   { id: 1, username: 'mwndigi', password: 'minhundheddertorben' },
   { id: 2, username: 'hildigi', password: 'pippilangstrump' }
 ];
 
 // GET index
-router.get('/', (req, res, next) => {
-  res.setHeader('Cache-Control', 'no-store, max-age=0');
+router.get('/', (req, res) => {
   res.render('index', { title: 'Password App' });
 });
 
+// POST login
 router.post('/login', (req, res) => {
   const { username, password } = req.body;
   const user = users.find(u => u.username === username && u.password === password);
@@ -25,6 +26,7 @@ router.post('/login', (req, res) => {
   }
 });
 
+// GET protected
 router.get('/protected', (req, res) => {
   if (req.cookies && req.cookies.loggedIn === 'true') {
     res.status(200).json({ message: 'Du har adgang til den beskyttede side med id ' + req.cookies.id + '.' });
