@@ -6,7 +6,7 @@ const app = express()
 
 app.use(responseTime())
 
-// Start en HTTP proxy
+// Start en HTTP proxy på port 8080 som peger på port 8000
 // Link: https://www.npmjs.com/package/http-proxy
 const proxy = httpProxy.createServer({
   target: {
