@@ -19,6 +19,7 @@ router.get('/set-session', async (req, res) => {
     res.json({ message: 'Session cookie set!' });
 });
 
+
 /* læser cookie med express-session */
 router.get('/get-session', async (req, res) => {
     res.json({ message: req.session.myCookie || 'No cookie set!' });
