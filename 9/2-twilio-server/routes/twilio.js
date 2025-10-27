@@ -6,6 +6,8 @@ require('dotenv').config();
 // Twilio API nøgler
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
+
+// Opret Twilio klient
 const client = twilio(accountSid, authToken);
 
 // Twilio responses til webhook for opkald og beskeder
@@ -78,7 +80,7 @@ router.post("/voice", async (req, res) => {
     }
 });
 
-// Endpoint for webhook til opkald
+// Endpoint for webhook til at modtage opkald
 router.post("/voice/webhook", twilio.webhook({ validate: false }), (req, res) => {
   const twiml = new VoiceResponse();
 
