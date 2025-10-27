@@ -4,6 +4,8 @@ require('dotenv').config();
 // Twilio API nøgler
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
+
+// Twilio klient
 const client = twilio(accountSid, authToken);
 
 async function createCall() {
