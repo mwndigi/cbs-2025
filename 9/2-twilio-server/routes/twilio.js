@@ -94,7 +94,7 @@ router.post("/voice/webhook", twilio.webhook({ validate: false }), (req, res) =>
 });
 
 // Endpoint for webhook til WhatsApp beskeder
-router.post("/whatsapp", twilio.webhook({ validate: false }), (req, res) => {
+router.post("/whatsapp/webhook", twilio.webhook({ validate: false }), (req, res) => {
     const twiml = new MessagingResponse();
   
     console.log(req.body);
@@ -102,11 +102,11 @@ router.post("/whatsapp", twilio.webhook({ validate: false }), (req, res) => {
     console.log("Message: ", req.body.Body);
 
     if (req.body.Body.toLowerCase() === "køb") {
-        twiml.message("Kom og køb oplevelser hos Understory");
+        twiml.message("Tak for dit køb af oplevelse hos Understory");
       } else if (req.body.Body.toLowerCase() === "slut") {
         twiml.message("Farvel og tak for dit køb");
       } else {
-        twiml.message(`Det her er en WhatsApp webhook. Svar "køb" for at købe hos Understory.`);
+        twiml.message(`Det her er en WhatsApp webhook. Svar "køb" for at købe hos Understory. Svar "slut" for at afslutte.`);
     }
 
     res.type("text/xml").send(twiml.toString());
