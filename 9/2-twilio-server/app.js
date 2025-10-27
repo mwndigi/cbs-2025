@@ -2,25 +2,20 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var helmet = require('helmet');
-
-
+require('dotenv').config();
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var twilioRouter = require('./routes/twilio');
 
 var app = express();
 
-// middleware setup
-app.use(helmet());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// routes
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/twilio', twilioRouter);
 
 module.exports = app;
