@@ -20,7 +20,7 @@ router.post("/message", async (req, res) => {
     const { phone, message } = req.body;
 
     if (!phone || !message) {
-      return res.status(400).send("Indtast både telefonnummer og besked for at sende en SMS.");
+      return res.status(400).send("Indtast både telefonnummer og besked for at sende en SMS. Husk det nu!");
     }
 
     try {
