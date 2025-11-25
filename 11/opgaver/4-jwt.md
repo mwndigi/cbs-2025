@@ -1,10 +1,10 @@
 # Opgave 5 - jsonwebtoken
 
-Et JSON Web Token (JWT) er en kompakt og sikker måde at sende information mellem client og server som et JSON-objekt. 
+En JSON Web Token (JWT) er en kompakt og sikker måde at sende information mellem client og server som et JSON objekt. 
 
-Det bruges typisk til autentificering og authorization i netværksapplikationer.
+Det bruges typisk til autentificering og authorisering i netværksapplikationer.
 
-Et JWT består af tre dele adskilt af punktummer. Strukturen er header.payload.signature:
+En JWT består af tre dele adskilt af punktummer. Strukturen er header.payload.signature:
 
 ```js 
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEyMywidXNlcm5hbWUiOiJBbGljZSJ9.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
